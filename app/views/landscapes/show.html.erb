@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @landscape.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @landscape.longitude %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @landscape.name %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @landscape.details %>
+</p>
+
+<%= link_to 'Edit', edit_landscape_path(@landscape) %> |
+<%= link_to 'Back', landscapes_path %>

@@ -1,0 +1,33 @@
+<h1>Listing landscapes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Name</th>
+      <th>Details</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @landscapes.each do |landscape| %>
+      <tr>
+        <td><%= landscape.latitude %></td>
+        <td><%= landscape.longitude %></td>
+        <td><%= landscape.name %></td>
+        <td><%= landscape.details %></td>
+        <td><%= link_to 'Show', landscape %></td>
+        <td><%= link_to 'Edit', edit_landscape_path(landscape) %></td>
+        <td><%= link_to 'Destroy', landscape, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Landscape', new_landscape_path %>
